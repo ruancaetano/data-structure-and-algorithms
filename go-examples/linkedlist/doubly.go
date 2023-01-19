@@ -147,3 +147,15 @@ func (sll *DoublyLinkedList[T]) DeleteValueAt(desiredIndex int) *DoublyLinkedLis
 
 	return nil
 }
+
+func (sll *DoublyLinkedList[T]) ToArray() []T {
+	var array []T
+
+	listNode := sll.Head
+	for listNode != nil {
+		array = append(array, listNode.Value)
+		listNode = listNode.Next
+	}
+
+	return array
+}

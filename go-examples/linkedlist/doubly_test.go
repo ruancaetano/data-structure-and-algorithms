@@ -137,3 +137,14 @@ func TestNewDoublyLinkedList_DeleteValueAt(t *testing.T) {
 	assert.Equal(t, 0, list.Size())
 	assert.Nil(t, list.DeleteValueAt(0))
 }
+
+func TestNewDoublyLinkedList_ToArray(t *testing.T) {
+	list := linkedlist.NewDoublyLinkedList[int]()
+	assert.NotNil(t, list)
+
+	list.Append(1)
+	list.Append(2)
+	list.Append(3)
+
+	assert.Equal(t, []int{1, 2, 3}, list.ToArray())
+}

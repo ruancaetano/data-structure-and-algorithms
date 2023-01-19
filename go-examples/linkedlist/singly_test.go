@@ -124,3 +124,14 @@ func TestNewSinglyLinkedList_DeleteValueAt(t *testing.T) {
 	assert.Nil(t, list.DeleteValueAt(0))
 	assert.Nil(t, list.Head)
 }
+
+func TestNewSinglyLinkedList_ToArray(t *testing.T) {
+	list := linkedlist.NewSinglyLinkedList[int]()
+	assert.NotNil(t, list)
+
+	list.Append(1)
+	list.Append(2)
+	list.Append(3)
+
+	assert.Equal(t, []int{1, 2, 3}, list.ToArray())
+}

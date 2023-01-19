@@ -145,3 +145,15 @@ func (sll *SinglyLinkedList[T]) DeleteValueAt(desiredIndex int) *SinglyLinkedLis
 
 	return nil
 }
+
+func (sll *SinglyLinkedList[T]) ToArray() []T {
+	var array []T
+
+	listNode := sll.Head
+	for listNode != nil {
+		array = append(array, listNode.Value)
+		listNode = listNode.Next
+	}
+
+	return array
+}
