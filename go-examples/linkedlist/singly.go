@@ -146,6 +146,8 @@ func (sll *SinglyLinkedList[T]) DeleteValueAt(desiredIndex int) *SinglyLinkedLis
 	return nil
 }
 
+// ToArray
+// On(n)
 func (sll *SinglyLinkedList[T]) ToArray() []T {
 	var array []T
 
