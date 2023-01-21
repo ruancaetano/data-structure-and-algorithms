@@ -148,6 +148,58 @@ func (sll *DoublyLinkedList[T]) DeleteValueAt(desiredIndex int) *DoublyLinkedLis
 	return nil
 }
 
+// GetFirst
+// O(1)
+func (sll *DoublyLinkedList[T]) GetFirst() *DoublyLinkedListNode[T] {
+	return sll.Head
+}
+
+// GetLast
+// O(1)
+func (sll *DoublyLinkedList[T]) GetLast() *DoublyLinkedListNode[T] {
+	return sll.Tail
+}
+
+// DeleteFirst
+// O(1)
+func (sll *DoublyLinkedList[T]) DeleteFirst() *DoublyLinkedListNode[T] {
+	if sll.Head == nil {
+		return nil
+	}
+
+	if sll.Head.Next == nil {
+		head := sll.Head
+		sll.Head = nil
+		sll.Tail = nil
+		return head
+	}
+
+	head := sll.Head
+	sll.Head = head.Next
+	return head
+}
+
+// DeleteLast
+// O(1)
+func (sll *DoublyLinkedList[T]) DeleteLast() *DoublyLinkedListNode[T] {
+	if sll.Tail == nil {
+		return nil
+	}
+
+	if sll.Tail.Prev == nil {
+		tail := sll.Tail
+		sll.Head = nil
+		sll.Tail = nil
+		return tail
+	}
+
+	tail := sll.Tail
+	prev := tail.Prev
+	prev.Next = nil
+	sll.Tail = prev
+	return tail
+}
+
 // ToArray
 // On(n)
 func (sll *DoublyLinkedList[T]) ToArray() []T {
