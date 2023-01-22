@@ -21,9 +21,9 @@ func (s *Stack[T]) Size() int {
 }
 
 // IsEmpty
-// O(n)
+// O(1)
 func (s *Stack[T]) IsEmpty() bool {
-	return s.list.Size() == 0
+	return s.list.Head == nil
 }
 
 // ToArray
