@@ -100,6 +100,68 @@ func (sll *SinglyLinkedList[T]) GetNodeAt(desiredIndex int) *SinglyLinkedListNod
 	return nil
 }
 
+// GetFirst
+// O(1)
+func (sll *SinglyLinkedList[T]) GetFirst() *SinglyLinkedListNode[T] {
+	return sll.Head
+}
+
+// GetLast
+// O(n)
+func (sll *SinglyLinkedList[T]) GetLast() *SinglyLinkedListNode[T] {
+	listNode := sll.Head
+	for listNode != nil {
+		if listNode.Next == nil {
+			break
+		}
+
+		listNode = listNode.Next
+	}
+
+	return listNode
+}
+
+// DeleteFirst
+// O(1)
+func (sll *SinglyLinkedList[T]) DeleteFirst() *SinglyLinkedListNode[T] {
+	if sll.Head == nil {
+		return nil
+	}
+
+	if sll.Head.Next == nil {
+		head := sll.Head
+		sll.Head = nil
+		return head
+	}
+
+	head := sll.Head
+	sll.Head = head.Next
+	return head
+}
+
+// DeleteLast
+// O(n)
+func (sll *SinglyLinkedList[T]) DeleteLast() *SinglyLinkedListNode[T] {
+	size := sll.Size()
+
+	if size == 0 {
+		return nil
+	}
+
+	if size == 1 {
+		head := sll.Head
+		sll.Head = nil
+		return head
+	}
+
+	last := sll.GetNodeAt(size - 1)
+
+	previousLast := sll.GetNodeAt(size - 2)
+	previousLast.Next = nil
+
+	return last
+}
+
 // DeleteValue
 // O(n)
 func (sll *SinglyLinkedList[T]) DeleteValue(value T) *SinglyLinkedListNode[T] {

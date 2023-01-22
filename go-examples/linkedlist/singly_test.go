@@ -125,6 +125,59 @@ func TestNewSinglyLinkedList_DeleteValueAt(t *testing.T) {
 	assert.Nil(t, list.Head)
 }
 
+func TestNewSinglyLinkedList_GetFirst(t *testing.T) {
+	list := linkedlist.NewSinglyLinkedList[int]()
+	assert.NotNil(t, list)
+
+	node1 := list.Prepend(1)
+	assert.Equal(t, node1, list.GetFirst())
+	node2 := list.Prepend(2)
+	assert.Equal(t, node2, list.GetFirst())
+}
+
+func TestNewSinglyLinkedList_GetLast(t *testing.T) {
+	list := linkedlist.NewSinglyLinkedList[int]()
+	assert.NotNil(t, list)
+
+	node1 := list.Append(1)
+	assert.Equal(t, node1, list.GetLast())
+	node2 := list.Append(2)
+	assert.Equal(t, node2, list.GetLast())
+}
+
+func TestNewSinglyLinkedList_DeleteFirst(t *testing.T) {
+	list := linkedlist.NewSinglyLinkedList[int]()
+	assert.NotNil(t, list)
+
+	assert.Nil(t, list.DeleteFirst())
+
+	node1 := list.Append(1)
+	node2 := list.Append(2)
+	assert.Equal(t, 2, list.Size())
+
+	assert.Equal(t, node1, list.DeleteFirst())
+	assert.Equal(t, 1, list.Size())
+
+	assert.Equal(t, node2, list.DeleteFirst())
+	assert.Equal(t, 0, list.Size())
+}
+
+func TestNewSinglyLinkedList_DeleteLast(t *testing.T) {
+	list := linkedlist.NewSinglyLinkedList[int]()
+	assert.NotNil(t, list)
+
+	assert.Nil(t, list.DeleteLast())
+
+	node1 := list.Append(1)
+	node2 := list.Append(2)
+
+	assert.Equal(t, 2, list.Size())
+	assert.Equal(t, node2, list.DeleteLast())
+	assert.Equal(t, 1, list.Size())
+	assert.Equal(t, node1, list.DeleteLast())
+	assert.Equal(t, 0, list.Size())
+}
+
 func TestNewSinglyLinkedList_ToArray(t *testing.T) {
 	list := linkedlist.NewSinglyLinkedList[int]()
 	assert.NotNil(t, list)
