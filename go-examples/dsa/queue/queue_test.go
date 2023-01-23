@@ -2,8 +2,8 @@ package queue_test
 
 import (
 	"github.com/stretchr/testify/assert"
-	"go-examples/linkedlist"
-	"go-examples/queue"
+	"go-examples/dsa/linkedlist"
+	"go-examples/dsa/queue"
 	"testing"
 )
 

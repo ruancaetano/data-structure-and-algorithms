@@ -1,7 +1,7 @@
 package bigonotation_test
 
 import (
-	"go-examples/bigonotation"
+	"go-examples/dsa/bigonotation"
 	"testing"
 
 	"github.com/stretchr/testify/assert"

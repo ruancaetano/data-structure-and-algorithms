@@ -2,8 +2,8 @@ package stack_test
 
 import (
 	"github.com/stretchr/testify/assert"
-	"go-examples/linkedlist"
-	"go-examples/stack"
+	"go-examples/dsa/linkedlist"
+	"go-examples/dsa/stack"
 	"testing"
 )
 

@@ -1,6 +1,8 @@
 package queue
 
-import "go-examples/linkedlist"
+import (
+	"go-examples/dsa/linkedlist"
+)
 
 type Queue[T comparable] struct {
 	list *linkedlist.DoublyLinkedList[T]
