@@ -1,24 +1,23 @@
-package tree_test
+package binary_search_tree
 
 import (
 	"github.com/stretchr/testify/assert"
-	"go-examples/dsa/tree"
 	"testing"
 )
 
 func TestNewBinarySearchTreeNode(t *testing.T) {
-	node := tree.NewBinarySearchTreeNode[int](1)
+	node := NewBinarySearchTreeNode[int](1)
 	assert.NotNil(t, node)
 	assert.Equal(t, 1, node.Value)
 }
 
 func TestNewBinarySearchTree(t *testing.T) {
-	searchTree := tree.NewBinarySearchTree[int]()
+	searchTree := NewBinarySearchTree[int]()
 	assert.NotNil(t, searchTree)
 }
 
 func TestNewBinarySearchTree_Insert(t *testing.T) {
-	searchTree := tree.NewBinarySearchTree[int]()
+	searchTree := NewBinarySearchTree[int]()
 
 	node1 := searchTree.Insert(5)
 	assert.Equal(t, 5, node1.Value)
@@ -33,7 +32,7 @@ func TestNewBinarySearchTree_Insert(t *testing.T) {
 }
 
 func TestNewBinarySearchTree_Find(t *testing.T) {
-	searchTree := tree.NewBinarySearchTree[int]()
+	searchTree := NewBinarySearchTree[int]()
 
 	node1 := searchTree.Insert(5)
 	node2 := searchTree.Insert(1)
@@ -52,7 +51,7 @@ func TestNewBinarySearchTree_Find(t *testing.T) {
 }
 
 func TestNewBinarySearchTree_FindParent(t *testing.T) {
-	searchTree := tree.NewBinarySearchTree[int]()
+	searchTree := NewBinarySearchTree[int]()
 
 	node1 := searchTree.Insert(5)
 	searchTree.Insert(1)
@@ -71,7 +70,7 @@ func TestNewBinarySearchTree_FindParent(t *testing.T) {
 }
 
 func TestNewBinarySearchTree_CountNodes(t *testing.T) {
-	searchTree := tree.NewBinarySearchTree[int]()
+	searchTree := NewBinarySearchTree[int]()
 
 	assert.Equal(t, 0, searchTree.CountNodes())
 	searchTree.Insert(5)

@@ -1,4 +1,4 @@
-package tree
+package binary_search_tree
 
 import "golang.org/x/exp/constraints"
 
