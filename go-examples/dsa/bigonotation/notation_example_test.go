@@ -1,8 +1,9 @@
 package bigonotation_test
 
 import (
-	"go-examples/dsa/bigonotation"
 	"testing"
+
+	"github.com/ruancaetano/data-structure-and-algorithms/go-examples/dsa/bigonotation"
 
 	"github.com/stretchr/testify/assert"
 )

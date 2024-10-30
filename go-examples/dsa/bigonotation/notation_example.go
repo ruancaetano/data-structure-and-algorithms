@@ -2,7 +2,8 @@ package bigonotation
 
 import (
 	"errors"
-	"go-examples/misc"
+
+	"github.com/ruancaetano/data-structure-and-algorithms/go-examples/misc"
 )
 
 type NotationExample struct {

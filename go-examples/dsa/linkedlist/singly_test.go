@@ -1,9 +1,10 @@
 package linkedlist_test
 
 import (
-	"github.com/stretchr/testify/assert"
-	"go-examples/dsa/linkedlist"
 	"testing"
+
+	"github.com/ruancaetano/data-structure-and-algorithms/go-examples/dsa/linkedlist"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestNewSinglyLinkedListNode(t *testing.T) {

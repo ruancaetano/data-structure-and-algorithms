@@ -1,8 +1,9 @@
 package hashtable
 
 import (
-	"go-examples/dsa/linkedlist"
 	"log"
+
+	"github.com/ruancaetano/data-structure-and-algorithms/go-examples/dsa/linkedlist"
 )
 
 const PrimeBlockSize = 33

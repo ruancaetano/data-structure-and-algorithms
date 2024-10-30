@@ -1,10 +1,11 @@
 package stack_test
 
 import (
-	"github.com/stretchr/testify/assert"
-	"go-examples/dsa/linkedlist"
-	"go-examples/dsa/stack"
 	"testing"
+
+	"github.com/ruancaetano/data-structure-and-algorithms/go-examples/dsa/linkedlist"
+	"github.com/ruancaetano/data-structure-and-algorithms/go-examples/dsa/stack"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestNewStack(t *testing.T) {

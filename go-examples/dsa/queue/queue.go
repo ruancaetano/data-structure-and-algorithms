@@ -1,7 +1,7 @@
 package queue
 
 import (
-	"go-examples/dsa/linkedlist"
+	"github.com/ruancaetano/data-structure-and-algorithms/go-examples/dsa/linkedlist"
 )
 
 type Queue[T comparable] struct {

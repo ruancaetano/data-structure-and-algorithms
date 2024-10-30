@@ -1,9 +1,10 @@
 package hashtable_test
 
 import (
-	"github.com/stretchr/testify/assert"
-	"go-examples/dsa/hashtable"
 	"testing"
+
+	"github.com/ruancaetano/data-structure-and-algorithms/go-examples/dsa/hashtable"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestNewHashTable(t *testing.T) {

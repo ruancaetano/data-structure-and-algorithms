@@ -1,8 +1,9 @@
 package misc_test
 
 import (
-	"go-examples/misc"
 	"testing"
+
+	"github.com/ruancaetano/data-structure-and-algorithms/go-examples/misc"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -1,10 +1,11 @@
 package queue_test
 
 import (
-	"github.com/stretchr/testify/assert"
-	"go-examples/dsa/linkedlist"
-	"go-examples/dsa/queue"
 	"testing"
+
+	"github.com/ruancaetano/data-structure-and-algorithms/go-examples/dsa/linkedlist"
+	"github.com/ruancaetano/data-structure-and-algorithms/go-examples/dsa/queue"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestNewQueue(t *testing.T) {

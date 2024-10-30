@@ -1,9 +1,10 @@
 package misc_test
 
 import (
-	"github.com/stretchr/testify/assert"
-	"go-examples/misc"
 	"testing"
+
+	"github.com/ruancaetano/data-structure-and-algorithms/go-examples/misc"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestGenerateRandomNumbers(t *testing.T) {
