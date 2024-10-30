@@ -1,4 +1,4 @@
-module go-examples
+module github.com/ruancaetano/data-structure-and-algorithms/go-examples
 
 go 1.19
 
